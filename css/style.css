@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.container .default {
+  background: white;
+}
+
+.container .aiko {
+  background: -webkit-linear-gradient(45deg, green, lightgreen);
+  background: linear-gradient(45deg, green, lightgreen);
+}
+
+.container .win {
+  background: -webkit-linear-gradient(45deg, red, orange);
+  background: linear-gradient(45deg, red, orange);
+}
+
+.container .lose {
+  background: -webkit-linear-gradient(45deg, blue, skyblue);
+  background: linear-gradient(45deg, blue, skyblue);
+}
+
+.container .result {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.container .janken {
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  border: 5px solid black;
+}
+
+.container .janken img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .result {
+  width: 15vw;
+  margin: 0 15px;
+  text-align: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+}
+
+.container .btn {
+  width: calc(60vw + 15vw + 30px);
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.container .btn #gu {
+  background-color: green;
+}
+
+.container .btn #choki {
+  background-color: yellow;
+}
+
+.container.lose {
+  background-color: blue;
+}

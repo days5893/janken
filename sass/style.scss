@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+$border: 5px;
+
+.container {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .default {
+    background: white;
+  }
+
+  .aiko {
+    background: linear-gradient(45deg, green, lightgreen);
+    // background: green;
+  }
+
+  .win {
+    background: linear-gradient(45deg, red, orange);
+    // background: red;
+  }
+
+  .lose {
+    background: linear-gradient(45deg, blue, skyblue);
+  }
+
+  .result {
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  .janken {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    align-self: center;
+    border: $border solid black;
+
+
+    img {
+      object-fit: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .result {
+    width: 15vw;
+    margin: 0 15px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .btn {
+    width: calc(60vw + 15vw + 30px);
+    margin: 10px 0;
+    cursor: pointer;
+
+    #gu {
+      background-color: green;
+    }
+
+    #choki {
+      background-color: yellow;
+    }
+  }
+
+
+
+ 
+
+
+
+
+  &.lose {
+    background-color: blue;
+  }
+}
