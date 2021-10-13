@@ -3,89 +3,85 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
-button {
-  cursor: pointer;
+body {
+  font-size: 16px;
 }
 
-$border: 5px;
+.wrap {
+  width: 100vw;
+  background-color: gray;
+}
 
 .container {
   display: flex;
-  padding-top: 10px;
-  justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
+  max-width: 968px;
+  font-size: 1.5rem;
+  margin: 0 auto;
 
-  .default {
-    background: white;
-  }
 
-  .aiko {
-    background: linear-gradient(45deg, green, lightgreen);
-    // background: green;
-  }
+  .item {
+    text-align: center;
 
-  .win {
-    background: linear-gradient(45deg, red, orange);
-    // background: red;
-  }
+    &:first-child {
+      width: calc(35% - 10px);
+      /* nthで、3番目だけキャンセルさせる必要あり */
+    }
 
-  .lose {
-    background: linear-gradient(45deg, blue, skyblue);
-  }
+    &:nth-child(2) {
+      width: calc(30% - 10px);
+      margin: 0 15px;
+      /* nthで、3番目だけキャンセルさせる必要あり */
+      align-self: center;
+    }
 
-  .result {
-    background-color: white;
-    border-radius: 3px;
+    &:nth-child(3) {
+      width: calc(35% - 10px);
+
+      /* nthで、3番目だけキャンセルさせる必要あり */
+    }
+
   }
 
   .janken {
-    position: relative;
-    width: 30vw;
-    height: 30vw;
-    align-self: center;
-    border: $border solid black;
-
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: white;
+    // width: 30vw;
 
     img {
-      object-fit: contain;
-      position: absolute;
       width: 100%;
-      height: 100%;
     }
   }
+}
 
-  .result {
-    width: 15vw;
-    margin: 0 15px;
-    text-align: center;
-    align-self: center;
-  }
+.result {
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+}
 
-  .btn {
-    width: calc(60vw + 15vw + 30px);
-    margin: 10px 0;
+.btn {
+
+  button {
     cursor: pointer;
-
-    #gu {
-      background-color: green;
-    }
-
-    #choki {
-      background-color: yellow;
-    }
+    font-size: 1.2rem;
+    padding: 2px 4px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
   }
 
+  #gu {
 
+    background-color: green;
+  }
 
- 
-
-
-
-
-  &.lose {
-    background-color: blue;
+  #choki {
+    background-color: yellow;
   }
 }
